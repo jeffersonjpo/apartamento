@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apê 104 Cruzeiro</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#09111f;color:#dde6f5;min-height:100vh;display:flex;overflow-x:hidden}
+:root{--bg:#09111f;--bg2:#0f1b2d;--bg3:#152238;--card:#1a2740;--card2:#1f304d;--card3:#253659;--border:#2a3f60;--border2:#334d73;--gold:#e9b84c;--gold2:#f5cd74;--blue:#4d90f0;--blue2:#6aaeff;--green:#3dd68c;--green2:#6feaac;--red:#f47370;--red2:#f9a09e;--orange:#fc9a42;--purple:#b38af8;--text:#dde6f5;--text2:#8baac8;--text3:#4a6585;--r:12px;--r2:7px;--shadow:0 8px 32px rgba(0,0,0,.45)}
+#sidebar{width:220px;min-height:100vh;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:100}
+.slogo{padding:20px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px}
+.licon{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),var(--orange));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.ltitle{font-size:16px;font-weight:800;color:var(--gold);line-height:1.2}
+.lsub{font-size:10px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase}
+.navmenu{list-style:none;padding:12px 8px;flex:1;display:flex;flex-direction:column;gap:2px}
+.nbtn{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:var(--r2);color:var(--text2);font-size:13px;font-weight:500;transition:all .14s;border:none;background:none;width:100%;text-align:left;cursor:pointer}
+.nbtn:hover{background:var(--bg3);color:var(--text)}
+.nbtn.active{background:rgba(233,184,76,.13);color:var(--gold);border-left:2px solid var(--gold);padding-left:9px}
+.nbtn svg{width:15px;height:15px;flex-shrink:0;opacity:.8}
+.nbtn.active svg{opacity:1}
+.sfooter{padding:12px 14px;border-top:1px solid var(--border);font-size:10px;color:var(--text3);text-align:center;line-height:1.6}
+#main{margin-left:220px;flex:1;padding:24px 28px}
+.phead{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:22px;gap:14px}
+.ptitle{font-size:21px;font-weight:800;letter-spacing:-.03em}
+.psub{font-size:12px;color:var(--text2);margin-top:3px}
+.hactions{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 15px;border-radius:var(--r2);font-weight:600;font-size:12.5px;border:none;transition:all .14s;line-height:1;cursor:pointer;font-family:inherit}
+.btn-p{background:linear-gradient(135deg,var(--gold),var(--orange));color:#0a1525}
+.btn-p:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.btn-s{background:var(--card2);color:var(--text);border:1px solid var(--border2)}
+.btn-s:hover{background:var(--card3)}
+.btn-d{background:rgba(244,115,112,.12);color:var(--red);border:1px solid rgba(244,115,112,.3)}
+.btn-sm{padding:5px 10px;font-size:11.5px}
+.bico{padding:5px;border-radius:var(--r2);background:none;border:1px solid var(--border);color:var(--text2);display:inline-flex;align-items:center;transition:all .12s;cursor:pointer;font-size:13px}
+.bico:hover{background:var(--bg3);color:var(--text)}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:13px;margin-bottom:22px}
+.scard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 17px;transition:border-color .14s}
+.scard:hover{border-color:var(--border2)}
+.sico{font-size:17px;margin-bottom:7px}
+.slbl{font-size:11px;color:var(--text2);margin-bottom:4px;font-weight:500;letter-spacing:.02em}
+.sval{font-size:20px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.ssub{font-size:10.5px;color:var(--text3);margin-top:4px}
+.c-g{color:var(--green)}.c-r{color:var(--red)}.c-gold{color:var(--gold)}.c-b{color:var(--blue2)}.c-pu{color:var(--purple)}.c-or{color:var(--orange)}
+.pwrap{background:var(--bg3);border-radius:100px;overflow:hidden}
+.pfill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--gold),var(--orange));transition:width .6s}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.ctitle{font-size:13px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.twrap{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:16px}
+.tbar{display:flex;align-items:center;gap:9px;padding:11px 13px;border-bottom:1px solid var(--border);flex-wrap:wrap;background:var(--bg3)}
+.sbox{display:flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:6px 9px;flex:1;min-width:160px}
+.sbox input{background:none;border:none;outline:none;color:var(--text);width:100%;font-size:12px}
+.sbox input::placeholder{color:var(--text3)}
+.fsel{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:6px 9px;color:var(--text);font-size:12px;outline:none;cursor:pointer;font-family:inherit}
+.fsel:focus{border-color:var(--gold)}
+table{width:100%;border-collapse:collapse}
+thead tr{background:var(--bg3)}
+th{padding:9px 12px;text-align:left;font-size:10px;font-weight:700;color:var(--text2);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--border)}
+td{padding:9px 12px;font-size:12.5px;border-bottom:1px solid rgba(42,63,96,.4)}
+tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:rgba(26,39,64,.4)}
+.tr{text-align:right}.tc{text-align:center}
+.badge{display:inline-flex;align-items:center;padding:2px 7px;border-radius:100px;font-size:10px;font-weight:700;white-space:nowrap}
+.b-parcela{background:rgba(77,144,240,.15);color:#7eb8ff}
+.b-amortizacao{background:rgba(179,138,248,.15);color:#c8a9fb}
+.b-aluguel{background:rgba(61,214,140,.15);color:#6feaac}
+.b-condominio{background:rgba(252,154,66,.15);color:#fcb668}
+.b-iptu{background:rgba(244,115,112,.15);color:#f79a97}
+.b-energia{background:rgba(233,184,76,.15);color:#f5cd74}
+.b-manutencao{background:rgba(139,170,200,.15);color:#8baac8}
+.b-outros{background:rgba(139,170,200,.15);color:#8baac8}
+.b-entrada{background:rgba(61,214,140,.15);color:#6feaac}
+.vd{color:var(--red)}.vc{color:var(--green)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.drow{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(42,63,96,.4)}
+.drow:last-child{border-bottom:none}
+.dlbl{font-size:12.5px;color:var(--text2)}.dval{font-size:13px;font-weight:700}
+.fg{margin-bottom:13px}
+.flbl{display:block;font-size:10.5px;font-weight:700;color:var(--text2);margin-bottom:4px;letter-spacing:.04em;text-transform:uppercase}
+.fc{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);padding:8px 11px;color:var(--text);outline:none;transition:border-color .14s;font-family:inherit;font-size:13px}
+.fc:focus{border-color:var(--gold)}
+select.fc option{background:var(--bg2)}
+.fhint{font-size:10px;color:var(--text3);margin-top:3px}
+.frow2{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+#overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:1000;backdrop-filter:blur(4px)}
+#overlay.hidden{display:none}
+#modal{background:var(--card);border:1px solid var(--border2);border-radius:13px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto;box-shadow:var(--shadow)}
+.mh{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border)}
+.mt{font-size:14px;font-weight:800}
+.mclose{background:none;border:none;color:var(--text2);width:26px;height:26px;display:flex;align-items:center;justify-content:center;border-radius:5px;cursor:pointer;font-size:15px}
+.mclose:hover{background:var(--bg3);color:var(--text)}
+.mb{padding:20px}
+.mf{display:flex;justify-content:flex-end;gap:9px;padding:13px 20px;border-top:1px solid var(--border)}
+.ccrd{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.cctitle{font-size:13px;font-weight:700;margin-bottom:13px}
+canvas{display:block;width:100%}
+.leg{display:flex;flex-wrap:wrap;gap:9px;margin-top:9px}
+.li{display:flex;align-items:center;gap:5px;font-size:10.5px;color:var(--text2)}
+.ld{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+.alert{padding:10px 13px;border-radius:var(--r2);font-size:12px;margin-bottom:13px}
+.ai{background:rgba(77,144,240,.1);border:1px solid rgba(77,144,240,.3);color:var(--blue2)}
+.aw{background:rgba(252,154,66,.1);border:1px solid rgba(252,154,66,.3);color:var(--orange)}
+.as{background:rgba(61,214,140,.1);border:1px solid rgba(61,214,140,.3);color:var(--green)}
+.abox{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:14px;margin-top:13px}
+.empty{text-align:center;padding:40px 20px;color:var(--text2)}
+.eico{font-size:40px;margin-bottom:9px;opacity:.3}
+hr{border:none;border-top:1px solid var(--border);margin:13px 0}
+#toast{position:fixed;bottom:20px;right:20px;background:var(--card);border:1px solid var(--border2);border-radius:var(--r);padding:10px 16px;font-size:12.5px;color:var(--text);box-shadow:var(--shadow);transform:translateY(100px);opacity:0;transition:all .26s;z-index:2000}
+#toast.show{transform:translateY(0);opacity:1}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ── LOGIN ── */
+#loginScreen{position:fixed;inset:0;background:#09111f;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:0}
+#loginScreen.hidden{display:none}
+.login-box{background:#1a2740;border:1px solid #2a3f60;border-radius:16px;padding:40px 36px;width:100%;max-width:380px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.login-logo{text-align:center;margin-bottom:28px}
+.login-logo .licon{width:56px;height:56px;font-size:26px;margin:0 auto 12px;background:linear-gradient(135deg,#e9b84c,#fc9a42);border-radius:14px;display:flex;align-items:center;justify-content:center}
+.login-logo h1{font-size:20px;font-weight:800;color:#e9b84c;margin-bottom:3px}
+.login-logo p{font-size:11.5px;color:#4a6585;text-transform:uppercase;letter-spacing:.12em}
+.login-err{background:rgba(244,115,112,.12);border:1px solid rgba(244,115,112,.35);border-radius:7px;padding:9px 13px;font-size:12px;color:#f79a97;margin-bottom:14px;display:none}
+.login-err.show{display:block}
+.sync-tag{font-size:10px;color:#4a6585;text-align:center;margin-top:14px}
+.sync-tag span{color:#3dd68c}
+#logoutBtn{display:none;align-items:center;gap:6px;padding:6px 10px;border-radius:6px;background:rgba(244,115,112,.1);border:1px solid rgba(244,115,112,.3);color:#f79a97;font-size:11.5px;cursor:pointer;font-family:inherit;margin-bottom:6px}
+#logoutBtn:hover{background:rgba(244,115,112,.2)}
+.sync-indicator{font-size:10px;color:#3dd68c;display:none;align-items:center;gap:4px;margin-bottom:4px}
+.sync-indicator.show{display:flex}
+.sync-dot{width:6px;height:6px;border-radius:50%;background:#3dd68c;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+</style>
+</head>
+<body>
+<nav id="sidebar">
+  <div class="slogo">
+    <div class="licon">🏠</div>
+    <div><div class="ltitle">Apê 104</div><div class="lsub">Cruzeiro</div></div>
+  </div>
+  <ul class="navmenu">
+    <li><button class="nbtn active" data-pg="dashboard" onclick="nav('dashboard')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>Dashboard
+    </button></li>
+    <li><button class="nbtn" data-pg="lancamentos" onclick="nav('lancamentos')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6M9 8h6M9 16h4M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>Lançamentos
+    </button></li>
+    <li><button class="nbtn" data-pg="financiamento" onclick="nav('financiamento')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Financiamento
+    </button></li>
+    <li><button class="nbtn" data-pg="relatorios" onclick="nav('relatorios')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Relatórios
+    </button></li>
+    <li><button class="nbtn" data-pg="backup" onclick="nav('backup')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Backup &amp; Config
+    </button></li>
+  </ul>
+  <div style="padding:10px 12px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:4px">
+  <div class="sync-indicator" id="syncIndicator"><div class="sync-dot"></div>Online · Dados sincronizados</div>
+  <button id="logoutBtn" onclick="doLogout()">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+    Sair da conta
+  </button>
+  <div class="sfooter" style="border:none;padding:0">Apê 104 Cruzeiro · v1.0<br>☁️ Firebase · GitHub Pages</div>
+</div>
+</nav>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen">
+  <div class="login-box">
+    <div class="login-logo">
+      <div class="licon">🏠</div>
+      <h1>Apê 104 Cruzeiro</h1>
+      <p>Sistema de Gestão</p>
+    </div>
+    <div class="login-err" id="loginErr"></div>
+    <div class="fg"><label class="flbl">E-mail</label>
+      <input class="fc" type="email" id="loginEmail" placeholder="seu@email.com" autocomplete="email"></div>
+    <div class="fg" style="margin-top:11px"><label class="flbl">Senha</label>
+      <input class="fc" type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password"
+        onkeydown="if(event.key==='Enter')doLogin()"></div>
+    <button class="btn btn-p" style="width:100%;justify-content:center;margin-top:18px;padding:11px" onclick="doLogin()" id="loginBtn">
+      Entrar
+    </button>
+    <p class="sync-tag">Dados sincronizados pela nuvem · <span>Firebase</span></p>
+  </div>
+</div>
+
+<main id="main"><div id="pg"></div></main>
+<div id="overlay" class="hidden" onclick="if(event.target===this)closeModal()">
+  <div id="modal">
+    <div class="mh"><span class="mt" id="mtitle">Novo Lançamento</span>
+      <button class="mclose" onclick="closeModal()">✕</button></div>
+    <div class="mb" id="mbody"></div>
+    <div class="mf">
+      <button class="btn btn-s" onclick="closeModal()">Cancelar</button>
+      <button class="btn btn-p" onclick="saveModal()">✔ Salvar</button>
+    </div>
+  </div>
+</div>
+<div id="toast"></div>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script>
+// TIPOS
+const TIPOS = {
+  parcela:    {label:'Parcela',          emoji:'💳', debit:true},
+  amortizacao:{label:'Amortização',      emoji:'⚡', debit:true},
+  entrada:    {label:'Entrada/Contrato', emoji:'📝', debit:true},
+  aluguel:    {label:'Aluguel Recebido', emoji:'🏘️', debit:false},
+  condominio: {label:'Condomínio',       emoji:'🏢', debit:true},
+  iptu:       {label:'IPTU',             emoji:'📋', debit:true},
+  energia:    {label:'Energia Elétrica', emoji:'💡', debit:true},
+  manutencao: {label:'Manutenção',       emoji:'🔧', debit:true},
+  outros:     {label:'Outros',           emoji:'📦', debit:true},
+};
+const CFG_PADRAO = {
+  nomeProp:'Apê 104 Cruzeiro', valorFinanciado:108000, valorEntrada:4050,
+  prazoInicial:360, dataContrato:'2023-05-01', saldoDevedorAtual:105207.18,
+};
+const HIST = [
+  {id:'h001',tipo:'entrada',descricao:'Contrato - Entrada',valor:4050,valorEfetivo:4050,data:'2023-05-01',prazoRestante:360,obs:''},
+  {id:'h002',tipo:'parcela',descricao:'Parcela do Apartamento',valor:555.59,valorEfetivo:555.59,data:'2023-06-05',prazoRestante:359,obs:''},
+  {id:'h003',tipo:'outros',descricao:'Chaves',valor:50,valorEfetivo:50,data:'2023-08-30',prazoRestante:null,obs:''},
+  {id:'h004',tipo:'parcela',descricao:'Parcela do Apartamento',valor:556.56,valorEfetivo:556.56,data:'2023-07-05',prazoRestante:358,obs:''},
+  {id:'h005',tipo:'parcela',descricao:'Parcela do Apartamento',valor:557.40,valorEfetivo:557.40,data:'2023-08-05',prazoRestante:357,obs:''},
+  {id:'h006',tipo:'manutencao',descricao:'Taxa de Manutenção',valor:28.75,valorEfetivo:28.75,data:'2023-08-08',prazoRestante:null,obs:''},
+  {id:'h007',tipo:'amortizacao',descricao:'Amortização',valor:1000,valorEfetivo:998.82,data:'2023-08-15',prazoRestante:352,obs:''},
+  {id:'h008',tipo:'parcela',descricao:'Parcela do Apartamento',valor:558.44,valorEfetivo:558.44,data:'2023-09-05',prazoRestante:350,obs:''},
+  {id:'h009',tipo:'manutencao',descricao:'Taxa de Manutenção',valor:28.75,valorEfetivo:28.75,data:'2023-09-06',prazoRestante:null,obs:''},
+  {id:'h010',tipo:'aluguel',descricao:'Aluguel Recebido',valor:500,valorEfetivo:500,data:'2023-09-30',prazoRestante:null,obs:''},
+  {id:'h011',tipo:'amortizacao',descricao:'Amortização',valor:600,valorEfetivo:598.94,data:'2023-09-20',prazoRestante:349,obs:''},
+  {id:'h012',tipo:'amortizacao',descricao:'Amortização',valor:438,valorEfetivo:436.87,data:'2023-09-27',prazoRestante:347,obs:''},
+  {id:'h013',tipo:'parcela',descricao:'Parcela do Apartamento',valor:558.06,valorEfetivo:558.06,data:'2023-10-05',prazoRestante:345,obs:''},
+  {id:'h014',tipo:'amortizacao',descricao:'Amortização',valor:414.96,valorEfetivo:414.96,data:'2023-10-06',prazoRestante:344,obs:''},
+  {id:'h015',tipo:'aluguel',descricao:'Aluguel Recebido',valor:500,valorEfetivo:500,data:'2023-10-30',prazoRestante:null,obs:''},
+  {id:'h016',tipo:'outros',descricao:'Portão Elétrico',valor:50,valorEfetivo:50,data:'2023-11-05',prazoRestante:null,obs:''},
+  {id:'h017',tipo:'parcela',descricao:'Parcela do Apartamento',valor:558.67,valorEfetivo:558.67,data:'2023-11-13',prazoRestante:342,obs:''},
+  {id:'h018',tipo:'aluguel',descricao:'Aluguel Recebido',valor:500,valorEfetivo:500,data:'2023-11-30',prazoRestante:null,obs:''},
+  {id:'h019',tipo:'parcela',descricao:'Parcela do Apartamento',valor:559.07,valorEfetivo:559.07,data:'2023-12-13',prazoRestante:341,obs:''},
+  {id:'h020',tipo:'aluguel',descricao:'Aluguel Recebido',valor:500,valorEfetivo:500,data:'2023-12-30',prazoRestante:null,obs:''},
+  {id:'h021',tipo:'parcela',descricao:'Parcela do Apartamento',valor:559.44,valorEfetivo:559.44,data:'2024-01-13',prazoRestante:340,obs:''},
+  {id:'h022',tipo:'aluguel',descricao:'Aluguel Recebido',valor:500,valorEfetivo:500,data:'2024-01-30',prazoRestante:null,obs:''},
+  {id:'h023',tipo:'parcela',descricao:'Parcela do Apartamento',valor:559.91,valorEfetivo:559.91,data:'2024-02-13',prazoRestante:339,obs:''},
+  {id:'h024',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2024-02-29',prazoRestante:null,obs:''},
+  {id:'h025',tipo:'outros',descricao:'Desentupidora',valor:25,valorEfetivo:25,data:'2024-03-07',prazoRestante:null,obs:''},
+  {id:'h026',tipo:'parcela',descricao:'Parcela do Apartamento',valor:559.91,valorEfetivo:559.91,data:'2024-03-08',prazoRestante:338,obs:''},
+  {id:'h027',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2024-03-30',prazoRestante:null,obs:''},
+  {id:'h028',tipo:'parcela',descricao:'Parcela do Apartamento',valor:560,valorEfetivo:560,data:'2024-04-10',prazoRestante:337,obs:''},
+  {id:'h029',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2024-04-30',prazoRestante:null,obs:''},
+  {id:'h030',tipo:'outros',descricao:'Cerca Elétrica 1ª parte',valor:60,valorEfetivo:60,data:'2024-05-11',prazoRestante:null,obs:''},
+  {id:'h031',tipo:'parcela',descricao:'Parcela do Apartamento',valor:572.70,valorEfetivo:572.70,data:'2024-05-16',prazoRestante:336,obs:''},
+  {id:'h032',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2024-05-30',prazoRestante:null,obs:''},
+  {id:'h033',tipo:'outros',descricao:'Cerca Elétrica 2ª parte',valor:60,valorEfetivo:60,data:'2024-06-04',prazoRestante:null,obs:''},
+  {id:'h034',tipo:'parcela',descricao:'Parcela do Apartamento',valor:573,valorEfetivo:573,data:'2024-06-16',prazoRestante:335,obs:''},
+  {id:'h035',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2024-06-30',prazoRestante:null,obs:''},
+  {id:'h036',tipo:'parcela',descricao:'Parcela do Apartamento',valor:561.34,valorEfetivo:561.34,data:'2024-07-15',prazoRestante:334,obs:''},
+  {id:'h037',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2024-07-31',prazoRestante:null,obs:''},
+  {id:'h038',tipo:'parcela',descricao:'Parcela do Apartamento',valor:562,valorEfetivo:562,data:'2024-08-10',prazoRestante:333,obs:''},
+  {id:'h039',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2024-08-31',prazoRestante:null,obs:''},
+  {id:'h040',tipo:'parcela',descricao:'Parcela do Apartamento',valor:562,valorEfetivo:562,data:'2024-09-10',prazoRestante:332,obs:''},
+  {id:'h041',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2024-09-30',prazoRestante:null,obs:''},
+  {id:'h042',tipo:'parcela',descricao:'Parcela do Apartamento',valor:562,valorEfetivo:562,data:'2024-10-10',prazoRestante:331,obs:''},
+  {id:'h043',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2024-10-30',prazoRestante:null,obs:''},
+  {id:'h044',tipo:'parcela',descricao:'Parcela do Apartamento',valor:562,valorEfetivo:562,data:'2024-11-10',prazoRestante:330,obs:''},
+  {id:'h045',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2024-11-30',prazoRestante:null,obs:''},
+  {id:'h046',tipo:'parcela',descricao:'Parcela do Apartamento',valor:562,valorEfetivo:562,data:'2024-12-10',prazoRestante:329,obs:''},
+  {id:'h047',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2024-12-29',prazoRestante:null,obs:''},
+  {id:'h048',tipo:'parcela',descricao:'Parcela do Apartamento',valor:563.77,valorEfetivo:563.77,data:'2025-01-10',prazoRestante:328,obs:''},
+  {id:'h049',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2025-01-29',prazoRestante:null,obs:''},
+  {id:'h050',tipo:'parcela',descricao:'Parcela do Apartamento',valor:562,valorEfetivo:562,data:'2025-02-13',prazoRestante:327,obs:''},
+  {id:'h051',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2025-02-28',prazoRestante:null,obs:''},
+  {id:'h052',tipo:'parcela',descricao:'Parcela do Apartamento',valor:563,valorEfetivo:563,data:'2025-03-13',prazoRestante:326,obs:''},
+  {id:'h053',tipo:'aluguel',descricao:'Aluguel Recebido',valor:470,valorEfetivo:470,data:'2025-03-30',prazoRestante:null,obs:''},
+  {id:'h054',tipo:'parcela',descricao:'Parcela do Apartamento',valor:563,valorEfetivo:563,data:'2025-04-10',prazoRestante:325,obs:''},
+  {id:'h055',tipo:'condominio',descricao:'Condomínio',valor:120,valorEfetivo:120,data:'2025-04-10',prazoRestante:null,obs:''},
+  {id:'h056',tipo:'outros',descricao:'Chaves',valor:7,valorEfetivo:7,data:'2025-04-10',prazoRestante:null,obs:''},
+  {id:'h057',tipo:'aluguel',descricao:'Aluguel Recebido',valor:550,valorEfetivo:550,data:'2025-04-20',prazoRestante:null,obs:''},
+  {id:'h058',tipo:'energia',descricao:'Energia Elétrica',valor:25.58,valorEfetivo:25.58,data:'2025-05-01',prazoRestante:null,obs:''},
+  {id:'h059',tipo:'condominio',descricao:'Condomínio',valor:126,valorEfetivo:126,data:'2025-05-05',prazoRestante:null,obs:''},
+  {id:'h060',tipo:'parcela',descricao:'Parcela do Apartamento',valor:578,valorEfetivo:578,data:'2025-05-15',prazoRestante:324,obs:''},
+  {id:'h061',tipo:'condominio',descricao:'Condomínio',valor:127,valorEfetivo:127,data:'2025-07-11',prazoRestante:null,obs:''},
+  {id:'h062',tipo:'parcela',descricao:'Parcela do Apartamento',valor:568,valorEfetivo:568,data:'2025-07-11',prazoRestante:323,obs:''},
+  {id:'h063',tipo:'condominio',descricao:'Condomínio',valor:130,valorEfetivo:130,data:'2025-08-10',prazoRestante:null,obs:''},
+  {id:'h064',tipo:'parcela',descricao:'Parcela do Apartamento',valor:576,valorEfetivo:576,data:'2025-08-10',prazoRestante:322,obs:''},
+  {id:'h065',tipo:'aluguel',descricao:'Aluguel Recebido',valor:600,valorEfetivo:600,data:'2025-08-20',prazoRestante:null,obs:''},
+  {id:'h066',tipo:'parcela',descricao:'Parcela do Apartamento',valor:578,valorEfetivo:578,data:'2025-09-10',prazoRestante:321,obs:''},
+  {id:'h067',tipo:'energia',descricao:'Energia Elétrica',valor:25.15,valorEfetivo:25.15,data:'2025-09-15',prazoRestante:null,obs:''},
+  {id:'h068',tipo:'condominio',descricao:'Condomínio',valor:130,valorEfetivo:130,data:'2025-10-10',prazoRestante:null,obs:''},
+  {id:'h069',tipo:'parcela',descricao:'Parcela do Apartamento',valor:575,valorEfetivo:575,data:'2025-10-13',prazoRestante:320,obs:''},
+  {id:'h070',tipo:'aluguel',descricao:'Aluguel Recebido',valor:600,valorEfetivo:600,data:'2025-10-20',prazoRestante:null,obs:''},
+  {id:'h071',tipo:'condominio',descricao:'Condomínio',valor:130,valorEfetivo:130,data:'2025-11-10',prazoRestante:null,obs:''},
+  {id:'h072',tipo:'parcela',descricao:'Parcela do Apartamento',valor:575,valorEfetivo:575,data:'2025-11-13',prazoRestante:319,obs:''},
+  {id:'h073',tipo:'aluguel',descricao:'Aluguel Recebido',valor:600,valorEfetivo:600,data:'2025-11-20',prazoRestante:null,obs:''},
+  {id:'h074',tipo:'condominio',descricao:'Condomínio',valor:130,valorEfetivo:130,data:'2025-12-10',prazoRestante:null,obs:''},
+  {id:'h075',tipo:'parcela',descricao:'Parcela do Apartamento',valor:575,valorEfetivo:575,data:'2025-12-13',prazoRestante:318,obs:''},
+  {id:'h076',tipo:'aluguel',descricao:'Aluguel Recebido',valor:600,valorEfetivo:600,data:'2025-12-20',prazoRestante:null,obs:''},
+  {id:'h077',tipo:'condominio',descricao:'Condomínio',valor:135,valorEfetivo:135,data:'2026-01-10',prazoRestante:null,obs:''},
+  {id:'h078',tipo:'parcela',descricao:'Parcela do Apartamento',valor:575,valorEfetivo:575,data:'2026-01-10',prazoRestante:317,obs:''},
+  {id:'h079',tipo:'aluguel',descricao:'Aluguel Recebido',valor:600,valorEfetivo:600,data:'2026-01-20',prazoRestante:null,obs:''},
+  {id:'h080',tipo:'iptu',descricao:'IPTU 2026 – Parcela 1/5',valor:81.41,valorEfetivo:81.41,data:'2026-02-10',prazoRestante:null,obs:''},
+  {id:'h081',tipo:'condominio',descricao:'Condomínio',valor:135,valorEfetivo:135,data:'2026-02-10',prazoRestante:null,obs:''},
+  {id:'h082',tipo:'parcela',descricao:'Parcela do Apartamento',valor:575,valorEfetivo:575,data:'2026-02-10',prazoRestante:316,obs:''},
+  {id:'h083',tipo:'aluguel',descricao:'Aluguel Recebido',valor:600,valorEfetivo:600,data:'2026-02-20',prazoRestante:null,obs:''},
+  {id:'h084',tipo:'iptu',descricao:'IPTU 2026 – Parcela 2/5',valor:81.41,valorEfetivo:81.41,data:'2026-03-10',prazoRestante:null,obs:''},
+  {id:'h085',tipo:'condominio',descricao:'Condomínio',valor:135,valorEfetivo:135,data:'2026-03-10',prazoRestante:null,obs:''},
+  {id:'h086',tipo:'parcela',descricao:'Parcela do Apartamento',valor:575,valorEfetivo:575,data:'2026-03-10',prazoRestante:315,obs:''},
+  {id:'h087',tipo:'aluguel',descricao:'Aluguel Recebido',valor:600,valorEfetivo:600,data:'2026-03-20',prazoRestante:null,obs:''},
+  {id:'h088',tipo:'iptu',descricao:'IPTU 2026 – Parcela 3/5',valor:81.41,valorEfetivo:81.41,data:'2026-04-09',prazoRestante:null,obs:''},
+  {id:'h089',tipo:'condominio',descricao:'Condomínio',valor:135,valorEfetivo:135,data:'2026-04-10',prazoRestante:null,obs:''},
+  {id:'h090',tipo:'parcela',descricao:'Parcela do Apartamento',valor:575,valorEfetivo:575,data:'2026-04-10',prazoRestante:314,obs:''},
+  {id:'h091',tipo:'iptu',descricao:'IPTU 2026 – Parcela 4/5',valor:81.41,valorEfetivo:81.41,data:'2026-05-10',prazoRestante:null,obs:''},
+  {id:'h092',tipo:'iptu',descricao:'IPTU 2026 – Parcela 5/5',valor:81.41,valorEfetivo:81.41,data:'2026-06-10',prazoRestante:null,obs:''},
+];
+
+
+// STATE
+let S={transacoes:[],config:{},pg:'dashboard',fTipo:'todos',fAno:'todos',fMes:'todos',fBusca:'',editId:null};
+
+function fmt(v){return'R$ '+Number(v||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fd(d){if(!d)return'—';const p=d.split('-');return p[2]+'/'+p[1]+'/'+p[0];}
+function uid(){return'u'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
+
+// ── FIREBASE CONFIG — preencha com seus dados do console.firebase.google.com ──
+const FIREBASE_CONFIG = {
+  apiKey:            "AIzaSyDhSc4l2HZ_gsfgv-IB_c97PBBN10g4O0k",
+  authDomain:        "gestaoape-3c95d.firebaseapp.com",
+  projectId:         "gestaoape-3c95d",
+  storageBucket:     "gestaoape-3c95d.firebasestorage.app",
+  messagingSenderId: "23030834834",
+  appId:             "1:23030834834:web:e090949556feaefd60284b"
+};
+firebase.initializeApp(FIREBASE_CONFIG);
+const AUTH = firebase.auth();
+const DB   = firebase.firestore();
+const DOC  = () => DB.collection('appfinanceiro').doc('main');
+
+// Persist to Firestore
+async function persist(){
+  try{
+    await DOC().set({config:S.config,transacoes:S.transacoes,savedAt:new Date().toISOString()});
+  }catch(e){
+    // fallback local
+    localStorage.setItem('ape104_v3',JSON.stringify({config:S.config,transacoes:S.transacoes,savedAt:new Date().toISOString()}));
+    console.warn('Firestore write failed, saved locally:',e.message);
+  }
+}
+
+async function loadFromFirestore(){
+  try{
+    const snap = await DOC().get();
+    if(snap.exists){
+      const d=snap.data();
+      S.transacoes=d.transacoes||[];
+      S.config=Object.assign({},CFG_PADRAO,d.config||{});
+    } else {
+      S.config={...CFG_PADRAO};
+      S.transacoes=HIST.map(h=>({...h}));
+      await persist();
+    }
+  }catch(e){
+    // fallback localStorage
+    const raw=localStorage.getItem('ape104_v3');
+    if(raw){const d=JSON.parse(raw);S.transacoes=d.transacoes||[];S.config=Object.assign({},CFG_PADRAO,d.config||{});}
+    else{S.config={...CFG_PADRAO};S.transacoes=HIST.map(h=>({...h}));}
+    console.warn('Firestore read failed, using local data:',e.message);
+  }
+  render();
+}
+
+function init(){
+  AUTH.onAuthStateChanged(async user=>{
+    if(user){
+      document.getElementById('loginScreen').classList.add('hidden');
+      document.getElementById('logoutBtn').style.display='flex';
+      document.getElementById('syncIndicator').classList.add('show');
+      await loadFromFirestore();
+    } else {
+      document.getElementById('loginScreen').classList.remove('hidden');
+      document.getElementById('logoutBtn').style.display='none';
+      document.getElementById('syncIndicator').classList.remove('show');
+    }
+  });
+}
+
+async function doLogin(){
+  const email=document.getElementById('loginEmail').value.trim();
+  const pass=document.getElementById('loginPass').value;
+  const errEl=document.getElementById('loginErr');
+  const btn=document.getElementById('loginBtn');
+  errEl.classList.remove('show');
+  if(!email||!pass){errEl.textContent='Preencha e-mail e senha.';errEl.classList.add('show');return;}
+  btn.textContent='Entrando…';btn.disabled=true;
+  try{
+    await AUTH.signInWithEmailAndPassword(email,pass);
+  }catch(e){
+    let msg='Erro ao entrar. Tente novamente.';
+    if(e.code==='auth/wrong-password'||e.code==='auth/invalid-credential')msg='Senha incorreta.';
+    else if(e.code==='auth/user-not-found')msg='Usuário não encontrado.';
+    else if(e.code==='auth/too-many-requests')msg='Muitas tentativas. Tente mais tarde.';
+    errEl.textContent=msg;errEl.classList.add('show');
+    btn.textContent='Entrar';btn.disabled=false;
+  }
+}
+
+async function doLogout(){
+  if(!confirm('Deseja sair da conta?'))return;
+  await AUTH.signOut();
+}
+
+function nav(pg){
+  S.pg=pg;
+  document.querySelectorAll('.nbtn').forEach(b=>b.classList.toggle('active',b.dataset.pg===pg));
+  render();
+}
+
+function render(){
+  const el=document.getElementById('pg');
+  switch(S.pg){
+    case'dashboard':el.innerHTML=pgDash();setTimeout(()=>{drawFluxo();drawPrazoDash();drawBalanco();},60);break;
+    case'lancamentos':el.innerHTML=pgLanc();break;
+    case'financiamento':el.innerHTML=pgFin();setTimeout(()=>drawPrazoHist('cvPrazoHist'),60);break;
+    case'relatorios':el.innerHTML=pgRel();break;
+    case'backup':el.innerHTML=pgBkp();break;
+  }
+}
+
+function stats(){
+  const T=S.transacoes;
+  let parc=0,amortP=0,amortE=0,alug=0,cond=0,iptu=0,energ=0,manut=0,outr=0,entr=0;
+  let prazoAtual=null,prazoRef='';
+  T.forEach(t=>{
+    const v=t.valor||0;
+    if(t.tipo==='parcela')parc+=v;
+    else if(t.tipo==='amortizacao'){amortP+=v;amortE+=(t.valorEfetivo||v);}
+    else if(t.tipo==='aluguel')alug+=v;
+    else if(t.tipo==='condominio')cond+=v;
+    else if(t.tipo==='iptu')iptu+=v;
+    else if(t.tipo==='energia')energ+=v;
+    else if(t.tipo==='manutencao')manut+=v;
+    else if(t.tipo==='outros')outr+=v;
+    else if(t.tipo==='entrada')entr+=v;
+    if(t.prazoRestante!=null&&t.data>prazoRef){prazoAtual=t.prazoRestante;prazoRef=t.data;}
+  });
+  const prazoIni=S.config.prazoInicial||360;
+  const prazoRest=prazoAtual!=null?prazoAtual:prazoIni;
+  const mesesPagos=prazoIni-prazoRest;
+  const saldo=parseFloat(S.config.saldoDevedorAtual)||0;
+  const gastos=cond+iptu+energ+manut+outr;
+  const totalDesp=parc+amortP+cond+iptu+energ+manut+outr+entr;
+  return{parc,amortP,amortE,alug,cond,iptu,energ,manut,outr,entr,
+    prazoRest,prazoIni,mesesPagos,pct:Math.min(100,mesesPagos/prazoIni*100),
+    saldo,gastos,totalDesp,saldoLiq:alug-gastos,fundosProprios:totalDesp-alug};
+}
+
+// ─── DASHBOARD ───
+function pgDash(){
+  const s=stats();
+  const nP=S.transacoes.filter(t=>t.tipo==='parcela').length;
+  const nA=S.transacoes.filter(t=>t.tipo==='aluguel').length;
+  const nAm=S.transacoes.filter(t=>t.tipo==='amortizacao').length;
+  const hoje=new Date();
+  const dtQ=new Date(hoje);dtQ.setMonth(hoje.getMonth()+s.prazoRest);
+  const dtQs=dtQ.toLocaleDateString('pt-BR',{month:'short',year:'numeric'});
+  const rec=[...S.transacoes].sort((a,b)=>b.data.localeCompare(a.data)).slice(0,10);
+  return`<div class="phead">
+    <div><div class="ptitle">📊 Dashboard</div><div class="psub">${S.config.nomeProp} · ${new Date().toLocaleDateString('pt-BR')}</div></div>
+    <div class="hactions"><button class="btn btn-p" onclick="openModal()">＋ Novo Lançamento</button></div>
+  </div>
+  <div class="sgrid">
+    <div class="scard"><div class="sico">🏦</div><div class="slbl">Saldo Devedor</div><div class="sval c-r">${fmt(s.saldo)}</div><div class="ssub">Atualizado manualmente</div></div>
+    <div class="scard"><div class="sico">📅</div><div class="slbl">Meses Restantes</div><div class="sval c-b">${s.prazoRest}</div><div class="ssub">${(s.prazoRest/12).toFixed(1)} anos · prev. ${dtQs}</div></div>
+    <div class="scard"><div class="sico">💳</div><div class="slbl">Total Parcelas</div><div class="sval">${fmt(s.parc)}</div><div class="ssub">${nP} parcelas pagas</div></div>
+    <div class="scard"><div class="sico">⚡</div><div class="slbl">Total Amortizado</div><div class="sval c-gold">${fmt(s.amortE)}</div><div class="ssub">${nAm} amortizações</div></div>
+    <div class="scard"><div class="sico">🏘️</div><div class="slbl">Aluguel Recebido</div><div class="sval c-g">${fmt(s.alug)}</div><div class="ssub">${nA} meses</div></div>
+    <div class="scard"><div class="sico">📈</div><div class="slbl">Total Aplicado</div><div class="sval c-gold">${fmt((S.config.valorEntrada||0)+(S.config.subsidio||0)+s.parc+s.amortE)}</div><div class="ssub">Ent. + Subs. + Parc. + Amort.</div></div>
+  </div>
+  <div class="card">
+    <div class="ctitle">🏗️ Progresso do Financiamento</div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+      <span style="font-size:12px;color:var(--text2)">${s.mesesPagos} de ${s.prazoIni} meses pagos</span>
+      <span style="font-size:13px;font-weight:800;color:var(--gold)">${s.pct.toFixed(1)}%</span>
+    </div>
+    <div class="pwrap" style="height:10px"><div class="pfill" style="width:${s.pct}%"></div></div>
+    <div style="display:flex;justify-content:space-between;margin-top:6px">
+      <span style="font-size:10.5px;color:var(--text3)">Mai 2023</span>
+      <span style="font-size:10.5px;color:var(--text3)">${s.prazoRest} meses restantes</span>
+      <span style="font-size:10.5px;color:var(--text3)">Prev. ${dtQs}</span>
+    </div>
+  </div>
+  <div class="ccrd">
+    <div class="cctitle">💰 Balanço dos Investimentos</div>
+    <canvas id="cvBalanco" height="150"></canvas>
+  </div>
+  <div class="g2">
+    <div class="ccrd"><div class="cctitle">📊 Fluxo Mensal (últimos 12 meses)</div>
+      <canvas id="cvFluxo" height="170"></canvas>
+      <div class="leg">
+        <div class="li"><div class="ld" style="background:#f47370"></div>Despesas</div>
+        <div class="li"><div class="ld" style="background:#3dd68c"></div>Aluguel</div>
+        <div class="li"><div class="ld" style="background:#4d90f0"></div>Parcela</div>
+      </div>
+    </div>
+    <div class="ccrd"><div class="cctitle">📉 Prazo Restante (evolução)</div>
+      <canvas id="cvPrazoDash" height="170"></canvas>
+    </div>
+  </div>
+  <div class="twrap">
+    <div class="tbar" style="justify-content:space-between">
+      <span style="font-size:13px;font-weight:700">Últimos Lançamentos</span>
+      <button class="btn btn-s btn-sm" onclick="nav('lancamentos')">Ver todos →</button>
+    </div>
+    <table><thead><tr><th>Data</th><th>Tipo</th><th>Descrição</th><th class="tr">Valor</th><th>Prazo</th></tr></thead>
+    <tbody>${rec.map(t=>`<tr>
+      <td style="color:var(--text2);white-space:nowrap">${fd(t.data)}</td>
+      <td><span class="badge b-${t.tipo}">${TIPOS[t.tipo]?.label||t.tipo}</span></td>
+      <td>${t.descricao}</td>
+      <td class="tr ${TIPOS[t.tipo]?.debit?'vd':'vc'}" style="font-weight:700">${TIPOS[t.tipo]?.debit?'−':'+'} ${fmt(t.valor)}</td>
+      <td style="color:var(--text2)">${t.prazoRestante!=null?t.prazoRestante+'m':'—'}</td>
+    </tr>`).join('')}</tbody></table>
+  </div>`;
+}
+
+// ─── LANÇAMENTOS ───
+function pgLanc(){
+  const anos=[...new Set(S.transacoes.map(t=>t.data.substring(0,4)))].sort().reverse();
+  const mNomes=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+  let list=[...S.transacoes];
+  if(S.fTipo!=='todos')list=list.filter(t=>t.tipo===S.fTipo);
+  if(S.fAno!=='todos')list=list.filter(t=>t.data.startsWith(S.fAno));
+  if(S.fMes!=='todos')list=list.filter(t=>t.data.substring(5,7)===S.fMes);
+  if(S.fBusca){const q=S.fBusca.toLowerCase();list=list.filter(t=>t.descricao.toLowerCase().includes(q)||(t.obs||'').toLowerCase().includes(q));}
+  list.sort((a,b)=>b.data.localeCompare(a.data));
+  const totD=list.filter(t=>TIPOS[t.tipo]?.debit).reduce((s,t)=>s+t.valor,0);
+  const totC=list.filter(t=>!TIPOS[t.tipo]?.debit).reduce((s,t)=>s+t.valor,0);
+  return`<div class="phead">
+    <div><div class="ptitle">📋 Lançamentos</div>
+    <div class="psub">${list.length} registros · Saídas: ${fmt(totD)} · Entradas: ${fmt(totC)}</div></div>
+    <div class="hactions"><button class="btn btn-p" onclick="openModal()">＋ Novo Lançamento</button></div>
+  </div>
+  <div class="twrap">
+    <div class="tbar">
+      <div class="sbox"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Buscar…" value="${S.fBusca}" oninput="S.fBusca=this.value;render()"></div>
+      <select class="fsel" onchange="S.fTipo=this.value;render()">
+        <option value="todos">Todos tipos</option>
+        ${Object.entries(TIPOS).map(([k,v])=>`<option value="${k}" ${S.fTipo===k?'selected':''}>${v.emoji} ${v.label}</option>`).join('')}
+      </select>
+      <select class="fsel" onchange="S.fAno=this.value;render()">
+        <option value="todos">Todos anos</option>
+        ${anos.map(a=>`<option value="${a}" ${S.fAno===a?'selected':''}>${a}</option>`).join('')}
+      </select>
+      <select class="fsel" onchange="S.fMes=this.value;render()">
+        <option value="todos">Todos meses</option>
+        ${['01','02','03','04','05','06','07','08','09','10','11','12'].map((m,i)=>`<option value="${m}" ${S.fMes===m?'selected':''}>${mNomes[i]}</option>`).join('')}
+      </select>
+      <button class="btn btn-s btn-sm" onclick="S.fTipo='todos';S.fAno='todos';S.fMes='todos';S.fBusca='';render()">✕ Limpar</button>
+    </div>
+    ${list.length===0?'<div class="empty"><div class="eico">🔍</div>Nenhum resultado</div>':`
+    <table><thead><tr><th>Data</th><th>Tipo</th><th>Descrição</th><th class="tr">Valor Pago</th><th class="tr">Val. Efetivo</th><th class="tc">Prazo</th><th class="tc">Ações</th></tr></thead>
+    <tbody>${list.map(t=>`<tr>
+      <td style="color:var(--text2);white-space:nowrap">${fd(t.data)}</td>
+      <td><span class="badge b-${t.tipo}">${TIPOS[t.tipo]?.emoji||''} ${TIPOS[t.tipo]?.label||t.tipo}</span></td>
+      <td>${t.descricao}${t.obs?`<br><small style="color:var(--text3)">${t.obs}</small>`:''}</td>
+      <td class="tr ${TIPOS[t.tipo]?.debit?'vd':'vc'}" style="font-weight:700">${TIPOS[t.tipo]?.debit?'−':'+'} ${fmt(t.valor)}</td>
+      <td class="tr" style="color:var(--text2)">${t.valorEfetivo&&t.valorEfetivo!==t.valor?fmt(t.valorEfetivo):'—'}</td>
+      <td class="tc">${t.prazoRestante!=null?`<span class="badge b-parcela">${t.prazoRestante}m</span>`:'—'}</td>
+      <td class="tc" style="white-space:nowrap">
+        <button class="bico" onclick="openModal('${t.id}')" title="Editar">✏️</button>
+        <button class="bico" onclick="delTrans('${t.id}')" title="Excluir" style="margin-left:3px">🗑️</button>
+      </td>
+    </tr>`).join('')}</tbody></table>`}
+  </div>`;
+}
+
+// ─── FINANCIAMENTO ───
+function pgFin(){
+  const s=stats();
+  const amorts=S.transacoes.filter(t=>t.tipo==='amortizacao').sort((a,b)=>a.data.localeCompare(b.data));
+  const tAP=amorts.reduce((x,t)=>x+t.valor,0);
+  const tAE=amorts.reduce((x,t)=>x+(t.valorEfetivo||t.valor),0);
+  const hoje=new Date();
+  const dtQ=new Date(hoje);dtQ.setMonth(hoje.getMonth()+s.prazoRest);
+  const dtQs=dtQ.toLocaleDateString('pt-BR',{month:'long',year:'numeric'});
+  return`<div class="phead"><div><div class="ptitle">📈 Financiamento</div>
+    <div class="psub">Contrato · ${fmt(S.config.valorFinanciado)} · ${S.config.prazoInicial} meses</div></div></div>
+  <div class="g2">
+    <div class="card">
+      <div class="ctitle">🏠 Contrato</div>
+      <div class="drow"><span class="dlbl">Valor Financiado</span><span class="dval c-gold">${fmt(S.config.valorFinanciado)}</span></div>
+      <div class="drow"><span class="dlbl">Valor de Entrada</span><span class="dval">${fmt(S.config.valorEntrada)}</span></div>
+      <div class="drow"><span class="dlbl">Subsídio Concedido</span><span class="dval c-g">${fmt(S.config.subsidio||0)}</span></div>
+      <div class="drow"><span class="dlbl">Prazo Inicial</span><span class="dval">${S.config.prazoInicial} meses</span></div>
+      <div class="drow"><span class="dlbl">Data Contrato</span><span class="dval">${fd(S.config.dataContrato)}</span></div>
+      <hr>
+      <div class="drow"><span class="dlbl">Saldo Devedor Atual</span><span class="dval c-r">${fmt(s.saldo)}</span></div>
+      <div class="drow"><span class="dlbl">Total Parcelas Pagas</span><span class="dval">${fmt(s.parc)}</span></div>
+      <div class="drow"><span class="dlbl">Total Amortizado (efetivo)</span><span class="dval c-g">${fmt(tAE)}</span></div>
+    </div>
+    <div class="card">
+      <div class="ctitle">⏱️ Prazo</div>
+      <div class="drow"><span class="dlbl">Meses Pagos</span><span class="dval c-g">${s.mesesPagos}</span></div>
+      <div class="drow"><span class="dlbl">Meses Restantes</span><span class="dval c-b">${s.prazoRest}</span></div>
+      <div class="drow"><span class="dlbl">Previsão Quitação</span><span class="dval">${dtQs}</span></div>
+      <div style="margin:13px 0 5px">
+        <div style="display:flex;justify-content:space-between;margin-bottom:5px">
+          <span style="font-size:11px;color:var(--text2)">Progresso</span>
+          <span style="font-size:13px;font-weight:800;color:var(--gold)">${s.pct.toFixed(1)}%</span>
+        </div>
+        <div class="pwrap" style="height:10px"><div class="pfill" style="width:${s.pct}%"></div></div>
+      </div>
+      <div class="drow"><span class="dlbl">Anos Restantes</span><span class="dval">${(s.prazoRest/12).toFixed(1)}</span></div>
+    </div>
+  </div>
+  <div class="ccrd"><div class="cctitle">📉 Evolução do Prazo Restante</div>
+    <canvas id="cvPrazoHist" height="140"></canvas>
+  </div>
+  <div class="card">
+    <div class="ctitle">⚡ Amortizações <span style="margin-left:auto;font-size:11px;color:var(--text2);font-weight:400">${amorts.length} registros</span></div>
+    ${amorts.length===0?'<p style="color:var(--text2);font-size:13px">Nenhuma amortização registrada.</p>':`
+    <table><thead><tr><th>Data</th><th class="tr">Valor Pago</th><th class="tr">Val. Efetivo</th><th>Prazo Após</th><th>Obs.</th></tr></thead>
+    <tbody>
+      ${amorts.map(t=>`<tr>
+        <td>${fd(t.data)}</td>
+        <td class="tr vd">− ${fmt(t.valor)}</td>
+        <td class="tr" style="color:var(--purple)">${fmt(t.valorEfetivo||t.valor)}</td>
+        <td>${t.prazoRestante!=null?`<span class="badge b-parcela">${t.prazoRestante}m</span>`:'—'}</td>
+        <td style="color:var(--text3);font-size:11px">${t.obs||'—'}</td>
+      </tr>`).join('')}
+      <tr style="background:var(--bg3)">
+        <td><strong>TOTAL</strong></td>
+        <td class="tr vd"><strong>− ${fmt(tAP)}</strong></td>
+        <td class="tr" style="color:var(--purple)"><strong>${fmt(tAE)}</strong></td>
+        <td colspan="2"></td>
+      </tr>
+    </tbody></table>`}
+  </div>
+  `;
+}
+
+function simCalc(){
+  const val=parseFloat(document.getElementById('simVal')?.value)||0;
+  const saldo=parseFloat(document.getElementById('simSaldo')?.value)||stats().saldo;
+  const prazo=stats().prazoRest;
+  const el=document.getElementById('simRes');if(!el)return;
+  if(!val||val<=0){el.innerHTML='';return;}
+  const amortMes=saldo/prazo;
+  const mRed=Math.floor(val/amortMes);
+  const novoPrazo=Math.max(0,prazo-mRed);
+  const hoje=new Date();
+  const dtN=new Date(hoje);dtN.setMonth(hoje.getMonth()+novoPrazo);
+  el.innerHTML=`<div class="abox">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;text-align:center">
+      <div><div style="font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Meses Reduzidos</div>
+           <div style="font-size:24px;font-weight:800;color:var(--green);margin-top:4px">~${mRed}</div></div>
+      <div><div style="font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Novo Prazo</div>
+           <div style="font-size:24px;font-weight:800;color:var(--blue2);margin-top:4px">${novoPrazo}m</div></div>
+      <div><div style="font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Nova Quitação</div>
+           <div style="font-size:18px;font-weight:800;color:var(--gold);margin-top:4px">${dtN.toLocaleDateString('pt-BR',{month:'short',year:'numeric'})}</div></div>
+      <div><div style="font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Economia</div>
+           <div style="font-size:24px;font-weight:800;color:var(--purple);margin-top:4px">${(mRed/12).toFixed(1)}a</div></div>
+    </div>
+    <p style="font-size:10px;color:var(--text3);text-align:center;margin-top:11px">* Estimativa. Valores exatos conforme banco.</p>
+  </div>`;
+}
+
+// ─── RELATÓRIOS ───
+function pgRel(){
+  const s=stats();
+  const ano=new Date().getFullYear();
+  return`<div class="phead"><div><div class="ptitle">📄 Relatórios</div>
+    <div class="psub">Exporte ou imprima dados do sistema</div></div></div>
+  <div class="g3">
+    <div class="card" style="text-align:center">
+      <div style="font-size:36px;margin-bottom:9px">📊</div>
+      <div style="font-size:13px;font-weight:800;margin-bottom:7px">Exportar Excel</div>
+      <p style="font-size:11.5px;color:var(--text2);margin-bottom:13px">Baixe todos os lançamentos em formato .xlsx.</p>
+      <button class="btn btn-p" style="width:100%;justify-content:center" onclick="exportExcel()">⬇ Baixar Excel</button>
+    </div>
+    <div class="card" style="text-align:center">
+      <div style="font-size:36px;margin-bottom:9px">📋</div>
+      <div style="font-size:13px;font-weight:800;margin-bottom:7px">Imprimir / PDF</div>
+      <p style="font-size:11.5px;color:var(--text2);margin-bottom:13px">Use o diálogo de impressão do navegador para salvar como PDF.</p>
+      <button class="btn btn-p" style="width:100%;justify-content:center" onclick="window.print()">🖨️ Imprimir</button>
+    </div>
+    <div class="card" style="text-align:center">
+      <div style="font-size:36px;margin-bottom:9px">📈</div>
+      <div style="font-size:13px;font-weight:800;margin-bottom:7px">Resumo Anual</div>
+      <p style="font-size:11.5px;color:var(--text2);margin-bottom:7px">Selecione o ano:</p>
+      <select class="fc" id="anoRel" style="margin-bottom:10px">
+        ${[...new Set(S.transacoes.map(t=>t.data.substring(0,4)))].sort().reverse().map(a=>`<option value="${a}">${a}</option>`).join('')}
+      </select>
+      <button class="btn btn-s" style="width:100%;justify-content:center" onclick="verResumoAno()">Ver Resumo</button>
+    </div>
+  </div>
+  <div id="resumoAno"></div>
+  <div class="card">
+    <div class="ctitle">📊 Totais Acumulados por Categoria</div>
+    <table><thead><tr><th>Categoria</th><th class="tr">Total</th><th class="tr">% do Total Saídas</th></tr></thead>
+    <tbody>
+      ${[
+        ['💳 Parcelas','parc',s.parc],['⚡ Amortizações','amortP',s.amortP],['📝 Entrada/Contrato','entr',s.entr],
+        ['🏢 Condomínio','cond',s.cond],['📋 IPTU','iptu',s.iptu],['💡 Energia','energ',s.energ],
+        ['🔧 Manutenção','manut',s.manut],['📦 Outros','outr',s.outr]
+      ].map(([l,,v])=>{
+        const pct=s.totalDesp>0?(v/s.totalDesp*100):0;
+        return`<tr><td>${l}</td><td class="tr" style="font-weight:700">${fmt(v)}</td>
+        <td class="tr"><div style="display:flex;align-items:center;justify-content:flex-end;gap:8px">
+          <span style="font-size:11px;color:var(--text2)">${pct.toFixed(1)}%</span>
+          <div class="pwrap" style="width:80px;height:5px"><div class="pfill" style="width:${Math.min(100,pct)}%"></div></div>
+        </div></td></tr>`;
+      }).join('')}
+      <tr style="background:var(--bg3)"><td><strong>TOTAL SAÍDAS</strong></td><td class="tr vd"><strong>${fmt(s.totalDesp)}</strong></td><td class="tr">100%</td></tr>
+      <tr><td style="color:var(--green)"><strong>🏘️ Aluguel Recebido</strong></td><td class="tr vc"><strong>+ ${fmt(s.alug)}</strong></td><td class="tr"></td></tr>
+      <tr style="background:var(--bg3)"><td><strong>SALDO LÍQUIDO</strong></td>
+        <td class="tr ${s.alug-s.totalDesp>=0?'vc':'vd'}"><strong>${fmt(s.alug-s.totalDesp)}</strong></td><td class="tr"></td></tr>
+    </tbody></table>
+  </div>`;
+}
+
+function verResumoAno(){
+  const ano=document.getElementById('anoRel')?.value;
+  if(!ano)return;
+  const T=S.transacoes.filter(t=>t.data.startsWith(ano));
+  const meses=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+  const rows=meses.map((mn,mi)=>{
+    const mm=String(mi+1).padStart(2,'0');
+    const TM=T.filter(t=>t.data.substring(5,7)===mm);
+    const alug=TM.filter(t=>t.tipo==='aluguel').reduce((s,t)=>s+t.valor,0);
+    const parc=TM.filter(t=>t.tipo==='parcela').reduce((s,t)=>s+t.valor,0);
+    const amort=TM.filter(t=>t.tipo==='amortizacao').reduce((s,t)=>s+t.valor,0);
+    const outros=TM.filter(t=>!['aluguel','parcela','amortizacao'].includes(t.tipo)).reduce((s,t)=>s+t.valor,0);
+    const saldo=alug-parc-amort-outros;
+    if(TM.length===0)return null;
+    return{mn,alug,parc,amort,outros,saldo,n:TM.length};
+  }).filter(Boolean);
+  if(!rows.length){document.getElementById('resumoAno').innerHTML=`<div class="alert aw">Nenhum lançamento em ${ano}</div>`;return;}
+  document.getElementById('resumoAno').innerHTML=`<div class="card">
+    <div class="ctitle">📆 Resumo ${ano}</div>
+    <table><thead><tr><th>Mês</th><th class="tr">Aluguel</th><th class="tr">Parcela</th><th class="tr">Amort.</th><th class="tr">Outros</th><th class="tr">Saldo Mês</th></tr></thead>
+    <tbody>${rows.map(r=>`<tr>
+      <td style="font-weight:600">${r.mn}</td>
+      <td class="tr vc">+${fmt(r.alug)}</td>
+      <td class="tr vd">−${fmt(r.parc)}</td>
+      <td class="tr" style="color:var(--purple)">−${fmt(r.amort)}</td>
+      <td class="tr vd">−${fmt(r.outros)}</td>
+      <td class="tr ${r.saldo>=0?'vc':'vd'}" style="font-weight:700">${fmt(r.saldo)}</td>
+    </tr>`).join('')}</tbody></table>
+  </div>`;
+}
+
+// ─── BACKUP ───
+function pgBkp(){
+  const n=S.transacoes.length;
+  const raw=localStorage.getItem('ape104_v3');
+  const saved=raw?JSON.parse(raw).savedAt:'—';
+  const savedStr=saved&&saved!=='—'?new Date(saved).toLocaleString('pt-BR'):'—';
+  return`<div class="phead"><div><div class="ptitle">💾 Backup & Config</div>
+    <div class="psub">Gerencie dados, backup e configurações</div></div></div>
+  <div class="g2">
+    <div class="card">
+      <div class="ctitle">💾 Backup dos Dados</div>
+      <div class="alert ai">Último salvamento: ${savedStr} · ${n} registros</div>
+      <div class="fg"><label class="flbl">Exportar Backup JSON</label>
+        <p style="font-size:11.5px;color:var(--text2);margin-bottom:9px">Salva todos os dados em arquivo .json para segurança.</p>
+        <button class="btn btn-p" onclick="exportBackup()">⬇ Baixar Backup JSON</button>
+      </div>
+      <hr>
+      <div class="fg"><label class="flbl">Importar Backup JSON</label>
+        <p style="font-size:11.5px;color:var(--text2);margin-bottom:9px">Restaura dados de um backup anterior. <strong style="color:var(--red)">Substituirá todos os dados atuais.</strong></p>
+        <input type="file" id="fileJSON" accept=".json" style="display:none" onchange="importBackup(event)">
+        <button class="btn btn-s" onclick="document.getElementById('fileJSON').click()">📂 Selecionar arquivo JSON</button>
+      </div>
+      <hr>
+      <div class="fg"><label class="flbl">Importar Excel (.xlsx / .csv)</label>
+        <p style="font-size:11.5px;color:var(--text2);margin-bottom:9px">Importe lançamentos de um arquivo Excel exportado pelo sistema. Apenas lançamentos novos serão adicionados.</p>
+        <input type="file" id="fileXLSX" accept=".csv,.xlsx,.xls" style="display:none" onchange="importCSV(event)">
+        <button class="btn btn-s" onclick="document.getElementById('fileXLSX').click()">📂 Selecionar Excel / CSV</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ctitle">⚙️ Configurações</div>
+      <div class="fg"><label class="flbl">Nome do Imóvel</label>
+        <input class="fc" id="cfgNome" value="${S.config.nomeProp||''}"></div>
+      <div class="fg"><label class="flbl">Valor Financiado (R$)</label>
+        <input class="fc" type="number" id="cfgVF" value="${S.config.valorFinanciado||0}" step="0.01"></div>
+      <div class="fg"><label class="flbl">Valor de Entrada (R$)</label>
+        <input class="fc" type="number" id="cfgVE" value="${S.config.valorEntrada||0}" step="0.01"></div>
+      <div class="fg"><label class="flbl">Subsídio Concedido (R$)</label>
+        <input class="fc" type="number" id="cfgSub" value="${S.config.subsidio||0}" step="0.01">
+        <div class="fhint">Valor de subsídio recebido no financiamento</div></div>
+      <div class="fg"><label class="flbl">Prazo Inicial (meses)</label>
+        <input class="fc" type="number" id="cfgPI" value="${S.config.prazoInicial||360}" step="1"></div>
+      <div class="fg"><label class="flbl">Data do Contrato</label>
+        <input class="fc" type="date" id="cfgDC" value="${S.config.dataContrato||''}"></div>
+      <div class="fg"><label class="flbl">Saldo Devedor Atual (R$)</label>
+        <input class="fc" type="number" id="cfgSD" value="${S.config.saldoDevedorAtual||0}" step="0.01">
+        <div class="fhint">Atualize manualmente após extrato bancário</div></div>
+      <button class="btn btn-p" onclick="salvarCfg()">✔ Salvar Configurações</button>
+    </div>
+  </div>
+  <div class="card card-danger">
+    <div class="ctitle" style="color:var(--red)">⚠️ Zona de Perigo</div>
+    <p style="font-size:12.5px;color:var(--text2);margin-bottom:13px">Estas ações são irreversíveis.</p>
+    <button class="btn btn-d" onclick="resetDados()">🗑️ Apagar Todos os Dados e Restaurar Histórico Original</button>
+  </div>`;
+}
+
+function salvarCfg(){
+  S.config.nomeProp=document.getElementById('cfgNome')?.value||S.config.nomeProp;
+  S.config.valorFinanciado=parseFloat(document.getElementById('cfgVF')?.value)||S.config.valorFinanciado;
+  S.config.valorEntrada=parseFloat(document.getElementById('cfgVE')?.value)||S.config.valorEntrada;
+  S.config.subsidio=parseFloat(document.getElementById('cfgSub')?.value)||0;
+  S.config.prazoInicial=parseInt(document.getElementById('cfgPI')?.value)||S.config.prazoInicial;
+  S.config.dataContrato=document.getElementById('cfgDC')?.value||S.config.dataContrato;
+  S.config.saldoDevedorAtual=parseFloat(document.getElementById('cfgSD')?.value)||S.config.saldoDevedorAtual;
+  persist();toast('✅ Configurações salvas!');
+}
+
+function resetDados(){
+  if(!confirm('Tem certeza? Todos os lançamentos serão removidos e o histórico original será restaurado.'))return;
+  S.transacoes=HIST.map(h=>({...h}));
+  S.config={...CFG_PADRAO};
+  persist();toast('🔄 Dados restaurados!');render();
+}
+
+// ─── MODAL ───
+function openModal(id){
+  S.editId=id||null;
+  const t=id?S.transacoes.find(x=>x.id===id):null;
+  const prazoAtual=stats().prazoRest;
+  document.getElementById('mtitle').textContent=t?'Editar Lançamento':'Novo Lançamento';
+  document.getElementById('mbody').innerHTML=`
+    <div class="fg"><label class="flbl">Tipo *</label>
+      <select class="fc" id="mTipo" onchange="togglePrazoField()">
+        ${Object.entries(TIPOS).map(([k,v])=>`<option value="${k}" ${t?.tipo===k?'selected':''}>${v.emoji} ${v.label}</option>`).join('')}
+      </select></div>
+    <div class="fg"><label class="flbl">Descrição *</label>
+      <input class="fc" id="mDesc" value="${t?.descricao||''}" placeholder="Ex: Parcela de Junho/2026"></div>
+    <div class="frow2">
+      <div class="fg"><label class="flbl">Valor Pago (R$) *</label>
+        <input class="fc" type="number" id="mValor" value="${t?.valor||''}" step="0.01" min="0" placeholder="0,00"></div>
+      <div class="fg"><label class="flbl">Valor Efetivo (R$)</label>
+        <input class="fc" type="number" id="mVE" value="${t?.valorEfetivo||''}" step="0.01" min="0" placeholder="Se diferente do pago">
+        <div class="fhint">Para amortizações parcialmente aplicadas</div></div>
+    </div>
+    <div class="frow2">
+      <div class="fg"><label class="flbl">Data *</label>
+        <input class="fc" type="date" id="mData" value="${t?.data||new Date().toISOString().split('T')[0]}"></div>
+      <div class="fg" id="prazoField"><label class="flbl">Prazo Restante (meses)</label>
+        <input class="fc" type="number" id="mPrazo" value="${t?.prazoRestante!=null?t.prazoRestante:''}" placeholder="${prazoAtual}" min="0" max="${S.config.prazoInicial}">
+        <div class="fhint">Prazo após este pagamento/amortização</div></div>
+    </div>
+    <div class="fg"><label class="flbl">Observação</label>
+      <input class="fc" id="mObs" value="${t?.obs||''}" placeholder="Notas adicionais"></div>`;
+  togglePrazoField();
+  document.getElementById('overlay').classList.remove('hidden');
+}
+
+function togglePrazoField(){
+  const tipo=document.getElementById('mTipo')?.value;
+  const el=document.getElementById('prazoField');
+  if(el)el.style.opacity=['parcela','amortizacao'].includes(tipo)?'1':'0.35';
+}
+
+function closeModal(){document.getElementById('overlay').classList.add('hidden');S.editId=null;}
+
+function saveModal(){
+  const tipo=document.getElementById('mTipo')?.value;
+  const desc=document.getElementById('mDesc')?.value?.trim();
+  const valor=parseFloat(document.getElementById('mValor')?.value);
+  const veRaw=document.getElementById('mVE')?.value;
+  const valorEfetivo=veRaw?parseFloat(veRaw):valor;
+  const data=document.getElementById('mData')?.value;
+  const prazoRaw=document.getElementById('mPrazo')?.value;
+  const prazoRestante=prazoRaw!==''?parseInt(prazoRaw):null;
+  const obs=document.getElementById('mObs')?.value?.trim();
+  if(!tipo||!desc||isNaN(valor)||valor<=0||!data){toast('⚠️ Preencha tipo, descrição, valor e data!');return;}
+  if(S.editId){
+    const i=S.transacoes.findIndex(x=>x.id===S.editId);
+    if(i>=0)S.transacoes[i]={...S.transacoes[i],tipo,descricao:desc,valor,valorEfetivo,data,prazoRestante,obs};
+  } else {
+    S.transacoes.push({id:uid(),tipo,descricao:desc,valor,valorEfetivo,data,prazoRestante,obs});
+  }
+  persist();closeModal();toast('✅ Lançamento salvo!');render();
+}
+
+function delTrans(id){
+  const t=S.transacoes.find(x=>x.id===id);
+  if(!t||!confirm(`Excluir "${t.descricao}" (${fmt(t.valor)})?`))return;
+  S.transacoes=S.transacoes.filter(x=>x.id!==id);
+  persist();toast('🗑️ Lançamento excluído!');render();
+}
+
+// ─── EXPORT EXCEL (CSV) ───
+function exportExcel(){
+  const header=['ID','Tipo','Descrição','Valor Pago','Valor Efetivo','Data','Prazo Restante','Observação'];
+  const rows=S.transacoes.sort((a,b)=>a.data.localeCompare(b.data)).map(t=>[
+    t.id,TIPOS[t.tipo]?.label||t.tipo,t.descricao,t.valor,t.valorEfetivo||t.valor,
+    fd(t.data),t.prazoRestante!=null?t.prazoRestante:'',t.obs||''
+  ]);
+  // BOM for Excel UTF-8
+  let csv='\uFEFF';
+  csv+='SEP=;\n';
+  csv+=[header,...rows].map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(';')).join('\n');
+  // Summary sheet data appended as comment block
+  const s=stats();
+  csv+='\n\n';
+  csv+=`"=== RESUMO ==="\n`;
+  csv+=`"Saldo Devedor";"${fmt(s.saldo)}"\n`;
+  csv+=`"Meses Restantes";"${s.prazoRest}"\n`;
+  csv+=`"Total Parcelas";"${fmt(s.parc)}"\n`;
+  csv+=`"Total Amortizado";"${fmt(s.amortE)}"\n`;
+  csv+=`"Aluguel Recebido";"${fmt(s.alug)}"\n`;
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`Ape104_Cruzeiro_${new Date().toISOString().split('T')[0]}.csv`;
+  a.click();
+  toast('📊 Excel (CSV) exportado!');
+}
+
+// ─── EXPORT BACKUP ───
+function exportBackup(){
+  const data={version:'3',config:S.config,transacoes:S.transacoes,exportedAt:new Date().toISOString()};
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`Ape104_Backup_${new Date().toISOString().split('T')[0]}.json`;
+  a.click();
+  toast('💾 Backup exportado!');
+}
+
+// ─── IMPORT BACKUP ───
+function importBackup(evt){
+  const file=evt.target.files[0];if(!file)return;
+  const r=new FileReader();
+  r.onload=e=>{
+    try{
+      const d=JSON.parse(e.target.result);
+      if(!d.transacoes)throw new Error('Formato inválido');
+      if(!confirm(`Importar ${d.transacoes.length} registros? Os dados atuais serão substituídos.`))return;
+      S.transacoes=d.transacoes;
+      S.config=Object.assign({},CFG_PADRAO,d.config||{});
+      persist();toast(`✅ ${d.transacoes.length} registros importados!`);render();
+    }catch(err){toast('❌ Arquivo inválido: '+err.message);}
+  };
+  r.readAsText(file);
+  evt.target.value='';
+}
+
+// ─── IMPORT CSV ───
+function importCSV(evt){
+  const file=evt.target.files[0];if(!file)return;
+  const r=new FileReader();
+  r.onload=e=>{
+    try{
+      const lines=e.target.result.split('\n').filter(l=>l.trim()&&!l.startsWith('"SEP')&&!l.startsWith('"='));
+      const rows=lines.map(l=>l.split(';').map(c=>c.replace(/^"|"$/g,'').replace(/""/g,'"')));
+      // Find header row
+      const hi=rows.findIndex(r=>r[0]==='ID'||r[0]==='id');
+      if(hi<0){toast('❌ CSV sem cabeçalho reconhecido');return;}
+      const data=rows.slice(hi+1).filter(r=>r.length>=6&&r[0]);
+      let added=0;
+      data.forEach(r=>{
+        if(!r[0]||S.transacoes.find(t=>t.id===r[0]))return;
+        const tipoKey=Object.entries(TIPOS).find(([,v])=>v.label===r[1])?.[0]||'outros';
+        const dtParts=r[5].split('/');
+        const dt=dtParts.length===3?`${dtParts[2]}-${dtParts[1]}-${dtParts[0]}`:r[5];
+        S.transacoes.push({
+          id:r[0],tipo:tipoKey,descricao:r[2],
+          valor:parseFloat(r[3])||0,valorEfetivo:parseFloat(r[4])||parseFloat(r[3])||0,
+          data:dt,prazoRestante:r[6]?parseInt(r[6]):null,obs:r[7]||''
+        });
+        added++;
+      });
+      persist();toast(`✅ ${added} novos lançamentos importados!`);render();
+    }catch(err){toast('❌ Erro ao importar: '+err.message);}
+  };
+  r.readAsText(file,'UTF-8');
+  evt.target.value='';
+}
+
+// ─── TOAST ───
+function toast(msg){
+  const el=document.getElementById('toast');
+  el.textContent=msg;el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'),2800);
+}
+
+// ─── CHARTS ───
+function drawFluxo(){
+  const cv=document.getElementById('cvFluxo');if(!cv)return;
+  const ctx=cv.getContext('2d');
+  cv.width=cv.offsetWidth*window.devicePixelRatio||600;
+  cv.height=cv.offsetHeight*window.devicePixelRatio||170;
+  ctx.scale(window.devicePixelRatio,window.devicePixelRatio);
+  const W=cv.offsetWidth,H=cv.offsetHeight;
+
+  // Last 12 months
+  const hoje=new Date();
+  const labels=[],despSer=[],alugSer=[],parcSer=[];
+  for(let i=11;i>=0;i--){
+    const d=new Date(hoje);d.setMonth(hoje.getMonth()-i);
+    const ym=d.toISOString().substring(0,7);
+    const mn=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'][d.getMonth()];
+    labels.push(mn+' '+String(d.getFullYear()).slice(2));
+    const TM=S.transacoes.filter(t=>t.data.startsWith(ym));
+    const alug=TM.filter(t=>t.tipo==='aluguel').reduce((s,t)=>s+t.valor,0);
+    const parc=TM.filter(t=>t.tipo==='parcela').reduce((s,t)=>s+t.valor,0);
+    const desp=TM.filter(t=>t.tipo!=='aluguel'&&t.tipo!=='parcela'&&TIPOS[t.tipo]?.debit).reduce((s,t)=>s+t.valor,0);
+    alugSer.push(alug);parcSer.push(parc);despSer.push(desp);
+  }
+  const allVals=[...despSer,...alugSer,...parcSer];
+  const maxV=Math.max(...allVals,1);
+  const pad={t:20,r:10,b:30,l:60};
+  const cW=W-pad.l-pad.r,cH=H-pad.t-pad.b;
+  const bW=cW/labels.length,bIW=bW*0.25;
+
+  ctx.clearRect(0,0,W,H);
+  // Grid lines
+  for(let i=0;i<=4;i++){
+    const y=pad.t+cH-(cH*i/4);
+    ctx.strokeStyle='rgba(42,63,96,0.5)';ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(pad.l+cW,y);ctx.stroke();
+    ctx.fillStyle='#4a6585';ctx.font='10px Segoe UI';ctx.textAlign='right';
+    ctx.fillText('R$'+Math.round(maxV*i/4/100)*100,pad.l-5,y+4);
+  }
+  // Bars
+  labels.forEach((lbl,i)=>{
+    const x=pad.l+i*bW+bW/2;
+    const bars=[[despSer[i],'#f47370'],[alugSer[i],'#3dd68c'],[parcSer[i],'#4d90f0']];
+    bars.forEach(([v,c],bi)=>{
+      const bx=x+(bi-1)*bIW*1.1-bIW/2;
+      const bh=(v/maxV)*cH;
+      ctx.fillStyle=c;
+      ctx.fillRect(bx,pad.t+cH-bh,bIW,bh);
+    });
+    ctx.fillStyle='#4a6585';ctx.font='9.5px Segoe UI';ctx.textAlign='center';
+    ctx.fillText(lbl,x,H-8);
+  });
+}
+
+function drawPrazoDash(){
+  const cv=document.getElementById('cvPrazoDash');if(!cv)return;
+  drawPrazoBase(cv,'cvPrazoDash');
+}
+
+function drawPrazoHist(id){
+  const cv=document.getElementById(id);if(!cv)return;
+  drawPrazoBase(cv,id);
+}
+
+function drawPrazoBase(cv){
+  const ctx=cv.getContext('2d');
+  cv.width=cv.offsetWidth*window.devicePixelRatio||600;
+  cv.height=cv.offsetHeight*window.devicePixelRatio||170;
+  ctx.scale(window.devicePixelRatio,window.devicePixelRatio);
+  const W=cv.offsetWidth,H=cv.offsetHeight;
+
+  const pts=S.transacoes.filter(t=>t.prazoRestante!=null).sort((a,b)=>a.data.localeCompare(b.data));
+  if(pts.length<2){
+    ctx.fillStyle='#4a6585';ctx.font='13px Segoe UI';ctx.textAlign='center';
+    ctx.fillText('Dados insuficientes',W/2,H/2);return;
+  }
+  const pad={t:20,r:20,b:30,l:55};
+  const cW=W-pad.l-pad.r,cH=H-pad.t-pad.b;
+  const maxP=Math.max(...pts.map(p=>p.prazoRestante));
+  const minP=Math.min(...pts.map(p=>p.prazoRestante));
+
+  ctx.clearRect(0,0,W,H);
+  // Grid
+  for(let i=0;i<=4;i++){
+    const y=pad.t+cH*i/4;
+    ctx.strokeStyle='rgba(42,63,96,0.5)';ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(pad.l+cW,y);ctx.stroke();
+    const v=Math.round(maxP-(maxP-minP)*i/4);
+    ctx.fillStyle='#4a6585';ctx.font='10px Segoe UI';ctx.textAlign='right';
+    ctx.fillText(v+'m',pad.l-5,y+4);
+  }
+  // Line
+  const grd=ctx.createLinearGradient(0,pad.t,0,pad.t+cH);
+  grd.addColorStop(0,'rgba(233,184,76,.25)');grd.addColorStop(1,'rgba(233,184,76,0)');
+  ctx.beginPath();
+  pts.forEach((p,i)=>{
+    const x=pad.l+i/(pts.length-1)*cW;
+    const y=pad.t+(1-(p.prazoRestante-minP)/(maxP-minP||1))*cH;
+    if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+  });
+  ctx.strokeStyle='#e9b84c';ctx.lineWidth=2.5;ctx.stroke();
+  // Fill
+  ctx.lineTo(pad.l+cW,pad.t+cH);ctx.lineTo(pad.l,pad.t+cH);ctx.closePath();
+  ctx.fillStyle=grd;ctx.fill();
+  // Labels
+  const step=Math.max(1,Math.floor(pts.length/6));
+  pts.forEach((p,i)=>{
+    if(i%step!==0&&i!==pts.length-1)return;
+    const x=pad.l+i/(pts.length-1)*cW;
+    ctx.fillStyle='#4a6585';ctx.font='9px Segoe UI';ctx.textAlign='center';
+    const yr=p.data.substring(0,7).replace('-','/');
+    ctx.fillText(yr,x,H-8);
+  });
+}
+
+function drawBalanco(){
+  const cv=document.getElementById('cvBalanco');if(!cv)return;
+  const ctx=cv.getContext('2d');
+  cv.width=cv.offsetWidth*window.devicePixelRatio||800;
+  cv.height=cv.offsetHeight*window.devicePixelRatio||150;
+  ctx.scale(window.devicePixelRatio,window.devicePixelRatio);
+  const W=cv.offsetWidth,H=cv.offsetHeight;
+
+  const s=stats();
+  const invTotal=s.parc+s.amortP+s.entr+s.cond+s.iptu+s.energ+s.manut+s.outr;
+  const fundReceb=s.alug;
+  const fundProp=Math.max(0,invTotal-fundReceb);
+
+  const bars=[
+    {label:'Fundos Recebidos',   value:fundReceb, color:'#3dd68c', bg:'rgba(61,214,140,.13)'},
+    {label:'Fundos Próprios',    value:fundProp,  color:'#fc9a42', bg:'rgba(252,154,66,.13)'},
+    {label:'Investimento Total', value:invTotal, color:'#4d90f0', bg:'rgba(77,144,240,.13)'},
+  ];
+
+  const labelW=160, pad={t:12,r:16,b:12,l:labelW};
+  const cW=W-pad.l-pad.r, cH=H-pad.t-pad.b;
+  const maxV=Math.max(...bars.map(b=>b.value),1);
+  const bGap=14, bH=Math.floor((cH-bGap*(bars.length-1))/bars.length);
+
+  ctx.clearRect(0,0,W,H);
+
+  // Vertical grid lines
+  for(let i=0;i<=4;i++){
+    const x=pad.l+cW*i/4;
+    ctx.strokeStyle='rgba(42,63,96,0.45)';ctx.lineWidth=1;
+    ctx.setLineDash([3,3]);
+    ctx.beginPath();ctx.moveTo(x,pad.t);ctx.lineTo(x,pad.t+cH);ctx.stroke();
+    ctx.setLineDash([]);
+    const v=Math.round(maxV*i/4);
+    ctx.fillStyle='#4a6585';ctx.font='9.5px Segoe UI';ctx.textAlign='center';
+    ctx.fillText('R$'+v.toLocaleString('pt-BR'),x,H-1);
+  }
+
+  bars.forEach((b,i)=>{
+    const y=pad.t+i*(bH+bGap);
+    const barLen=(b.value/maxV)*cW;
+
+    // Label (left side)
+    ctx.fillStyle='#8baac8';ctx.font='12px Segoe UI';ctx.textAlign='right';
+    ctx.fillText(b.label,pad.l-10,y+bH/2+4);
+
+    // Track background
+    ctx.fillStyle=b.bg;
+    ctx.beginPath();ctx.roundRect(pad.l,y,cW,bH,5);ctx.fill();
+
+    // Bar fill with gradient
+    const grd=ctx.createLinearGradient(pad.l,0,pad.l+barLen,0);
+    grd.addColorStop(0,b.color);grd.addColorStop(1,b.color+'99');
+    ctx.fillStyle=grd;
+    ctx.beginPath();ctx.roundRect(pad.l,y,barLen,bH,5);ctx.fill();
+
+    // Value label inside or after bar
+    const valStr=fmt(b.value);
+    ctx.font='bold 12px Segoe UI';
+    const tw=ctx.measureText(valStr).width;
+    const insideThreshold=cW*0.35;
+    if(barLen>insideThreshold+tw+12){
+      ctx.fillStyle='#fff';ctx.textAlign='right';
+      ctx.fillText(valStr,pad.l+barLen-8,y+bH/2+4);
+    } else {
+      ctx.fillStyle=b.color;ctx.textAlign='left';
+      ctx.fillText(valStr,pad.l+barLen+8,y+bH/2+4);
+    }
+  });
+}
+
+window.onload=init;
+window.addEventListener('resize',()=>{if(S.pg==='dashboard'){drawFluxo();drawPrazoDash();drawBalanco();}if(S.pg==='financiamento')drawPrazoHist('cvPrazoHist');});
+</script>
+</body>
+</html>
